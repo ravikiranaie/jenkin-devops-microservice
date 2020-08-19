@@ -5,7 +5,7 @@ pipeline {
 	// agent any // It is similar to node, where your build is going to run and it will give lot of flexibility
 	
 	//running the build in the docker agent
-	agent {	docker {	image 'maven:3.6.3'} }   
+	agent {	docker {	image 'maven:3.6.3-openjdk-15'} }   
 	
 	// In declarative pipeline, we should keep the tasks in stage, and stages are compulsory
 	stages {
