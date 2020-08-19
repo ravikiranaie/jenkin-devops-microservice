@@ -16,10 +16,14 @@ pipeline {
 		stage('Build'){
 			steps{
 				// sh 'mvn --version'
-				a=5
-				b=6
-				print a+b
-				print Environment("Test")
+				// a=5
+				// b=6
+				// print a+b
+				print Environment("TestName")
+				print Environment("OS")
+				print Environment("OSVersion")
+				print Environment("LocalHostName")
+				print Environment("ActionName")
 				// echo "Build"
 				// echo "Boshanam Stage"
 			}
