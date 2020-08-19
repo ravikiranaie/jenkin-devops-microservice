@@ -33,6 +33,9 @@ pipeline {
 		failure{
 			echo "I will execute when any of the step failed"
 		}
+		changed{
+			echo "I will execute when the status of the build changed from the previous build"
+		}
 	 }
 	}
 
