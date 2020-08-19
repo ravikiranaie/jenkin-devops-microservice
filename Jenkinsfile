@@ -21,6 +21,16 @@ pipeline {
 			steps{
 				echo "Integration Test"
 			}
+		}post{
+			always{
+				echo "I will always execute"
+			}
+			success{
+				echo "I will execute when step of pipeline is succeeded"
+			}
+			failure{
+				echo "I will execute when any of the step failed"
+			}
 		}
 	}
 
