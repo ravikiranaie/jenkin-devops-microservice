@@ -5,27 +5,35 @@ pipeline {
 	// agent any // It is similar to node, where your build is going to run and it will give lot of flexibility
 	
 	//running the build in the docker agent
-	agent {	docker {	image 'maven:3.6.3-openjdk-15'} }   
+	// agent {	docker {	image 'maven:3.6.3-openjdk-15'} }
+	//running uft
+	agent {	docker {	image 'functionaltesting/uft:15.0.1'} }
+
+
 	
 	// In declarative pipeline, we should keep the tasks in stage, and stages are compulsory
 	stages {
 		stage('Build'){
 			steps{
-				sh 'mvn --version'
-				echo "Build"
-				echo "Boshanam Stage"
+				// sh 'mvn --version'
+				a=5
+				b=6
+				print(a+b)"
+				print(Environemnt("Test"))
+				// echo "Build"
+				// echo "Boshanam Stage"
 			}
 		}
-		stage('Test'){
-			steps{
-				echo "Test"
-			}
-		}
-		stage('Integration Test'){
-			steps{
-				echo "Integration Test"
-			}
-		}
+		// stage('Test'){
+		// 	steps{
+		// 		echo "Test"
+		// 	}
+		// }
+		// stage('Integration Test'){
+		// 	steps{
+		// 		echo "Integration Test"
+		// 	}
+		// }
 	}	
 	post{
 		always{
