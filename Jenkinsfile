@@ -22,7 +22,7 @@ pipeline {
 				echo "Integration Test"
 			}
 		}
-		
+	}	
 	post{
 		always{
 			echo "I will always execute"
@@ -33,7 +33,7 @@ pipeline {
 		failure{
 			echo "I will execute when any of the step failed"
 		}
-		}
+	 }
 	}
 
 	
