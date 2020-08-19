@@ -18,8 +18,8 @@ pipeline {
 				// sh 'mvn --version'
 				a=5
 				b=6
-				print(a+b)"
-				print(Environemnt("Test"))
+				print a+b
+				print Environment("Test")
 				// echo "Build"
 				// echo "Boshanam Stage"
 			}
